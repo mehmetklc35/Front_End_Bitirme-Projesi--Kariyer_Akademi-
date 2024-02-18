@@ -1,0 +1,52 @@
+# <!-- 6. *Randevu Yönetim Sayfası:* - - 
+    # Öğrencinin veya eğitmenin aldığı/verdiği derslerin görüntülendiği bölüm veya 
+    # takvim 
+    # Randevu iptali veya onaylama seçenekleri  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Randevu Formu</title>
+    <link rel="stylesheet" href="randevu.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Randevu Formu</h1>     
+      <form method="post" action="https::register-demo.freecodecamp.org" id="survey-form">
+        <fieldset>
+        <label for="name" id="name-label">Ad: <input id="name" type="text" placeholder="Adınız" required></label>
+        <label for="email" id="email-label">E-mail: <input id="email" type="email" placeholder="example@email.com" required></label>
+        <label for="ders" id="ders-label">Seçmek İstediğiniz Ders: <input id="ders" type="text" placeholder="Ders Adı" required></label>
+        </fieldset>
+        <fieldset>
+        <label for="dropdown"> Aldığım Dersler
+          <select id="dropdown">
+            <option>Matematik</option>
+            <option>Fizik</option>
+            <option>Kimya</option>
+            <option>Biyoloji</option>
+          </select>
+        </label>
+        </fieldset>
+        <fieldset>
+        <legend>Öğretmenler Hakkında Düşünceleriniz ? </legend>
+        <label ><input class="inline" > Newton</label>
+        <label ><input class="inline" > Sabahattin Ali</label>
+        </fieldset>
+        <fieldset>
+        <p>İptal Etmek İstediğiniz Randevular?</p>
+        <label for="action"><input id="action" class="inline" value="0" type="checkbox"> Matematik</label>
+        <label for="rpg"><input id="rpg" class="inline" value="1" type="checkbox"> Fizik</label>
+        <label for="horror"><input id="horror" class="inline" value="2" type="checkbox"> Kimya</label>
+        <label for="puzzle"><input id="puzzle" class="inline" value="3" type="checkbox"> Biyoloji</label> 
+        </fieldset>
+        <fieldset>
+        <textarea placeholder="Yorumlarınız bizim için önem arz etmektedir...." rows="10"></textarea>
+        </fieldset>
+        <label for="submit"><input id="submit" type="submit"></label>
+      </form>
+    </main>
+    
+  </body>
+</html>

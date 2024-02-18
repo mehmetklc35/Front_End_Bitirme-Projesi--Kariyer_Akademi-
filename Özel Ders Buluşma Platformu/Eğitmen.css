@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+:root {
+  --bg-color: rgb(225, 229,242);
+  --color1: rgb(191, 219, 247);
+  --color2: rgb(31, 122, 140);
+  --color3: rgb(2, 43, 58);
+  --white: rgb(255, 255, 255);
+  --persian-orange: rgb(198, 136, 102);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 16px / 24px 'Lora', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--color3);
+  margin: 50px 0;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  padding: 25px 0;
+  list-style: none;
+  text-align: center;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	justify-content: center;
+  flex: 0 0 100%;
+  padding: 20px;
+  background: var(--bg-color);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.2),
+    -6px -6px 12px 0 rgba(255, 255, 255, 0.5);
+  scroll-snap-align: start;
+  transition: all 0.2s;
+}
+
+.card:not(last-child) {
+  margin-right: 10px;
+}
+
+.card:hover {
+  scale: 1.05;
+}
+.card .card-title {
+  font-size: 1.5rem;
+}
+
+.card .round {
+  border: 2px solid var(--persian-orange);
+  border-radius: 50%;
+  padding: .35rem;
+}
+.card .card-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+.card-content p {
+  font-size: 0.88rem
+}
+button.primary {
+	background-color: var(--color3);
+	border: 1px solid var(--color3);
+	border-radius: 3px;
+	color: var(--white);
+  font-family: inherit;
+	font-weight: 500;
+	padding: 10px 25px;
+  margin-top: 1rem;
+}
+
+button.primary:hover {
+  background: var(--color2);
+}
+
+button.primary.ghost {
+	background-color: transparent;
+	color: var(--color3);
+}
+
+button.ghost:hover {
+  background: var(--color2);
+  color: var(--white);
+}
+/* Media Query */
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 40px;
+  }
+}
